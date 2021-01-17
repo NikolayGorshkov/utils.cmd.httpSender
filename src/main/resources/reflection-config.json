@@ -1,0 +1,20 @@
+[
+    {
+        "name": "com.sun.org.apache.xpath.internal.functions.FuncNormalizeSpace",
+        "allDeclaredConstructors": true,
+        "allPublicConstructors": true,
+        "allDeclaredMethods": true,
+        "allPublicMethods": true,
+        "allDeclaredFields": true,
+        "allPublicFields": true
+    },
+    {
+        "name": "com.sun.org.apache.xml.internal.utils.FastStringBuffer",
+        "allDeclaredConstructors": true,
+        "allPublicConstructors": true,
+        "allDeclaredMethods": true,
+        "allPublicMethods": true,
+        "allDeclaredFields": true,
+        "allPublicFields": true
+    }
+]

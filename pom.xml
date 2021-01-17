@@ -17,6 +17,7 @@
     <quarkus.platform.group-id>io.quarkus</quarkus.platform.group-id>
     <quarkus.platform.version>1.10.3.Final</quarkus.platform.version>
     <surefire-plugin.version>3.0.0-M5</surefire-plugin.version>
+    <quarkus.package.type>uber-jar</quarkus.package.type>
   </properties>
   <dependencyManagement>
     <dependencies>
@@ -118,6 +119,8 @@
       </build>
       <properties>
         <quarkus.package.type>native</quarkus.package.type>
+        <quarkus.native.additional-build-args>-H:ReflectionConfigurationFiles=reflection-config.json, \
+         -H:IncludeResourceBundles=com.sun.org.apache.xml.internal.res.XMLErrorResources</quarkus.native.additional-build-args>
       </properties>
     </profile>
   </profiles>
