@@ -54,6 +54,29 @@ and Alt+Enter, but Google don't support POST search queries, and will happily te
 If you copy headers from browser request, don't forget to replace value "Connection" header from
 "keep-alive" to "close".
 
+Another example for HTTP/1.1:
+
+```
+GET /?q=quarkus&format=xml HTTP/1.1
+Host: api.duckduckgo.com
+Connection: close
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Accept-Encoding: gzip, deflate
+Accept-Language: en-US,en;q=0.9,ru;q=0.8
+```
+
+and for HTTP/2:
+
+```
+:authority: api.duckduckgo.com
+:method: GET
+:path: /?q=quarkus&format=xml
+:scheme: https
+accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+accept-encoding: gzip, deflate
+accept-language: en-US,en;q=0.9,ru;q=0.8
+```
+
 ## Running the application in dev mode
 
 You can run your application in dev mode that enables live coding using:
