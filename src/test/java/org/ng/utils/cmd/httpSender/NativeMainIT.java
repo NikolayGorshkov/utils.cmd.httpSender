@@ -10,6 +10,6 @@ public class NativeMainIT extends MainTest {
 
     // Execute the same tests but in native mode.
 
-    // TODO: make mative image tests run
+    // TODO: make native image tests run
 
 }
