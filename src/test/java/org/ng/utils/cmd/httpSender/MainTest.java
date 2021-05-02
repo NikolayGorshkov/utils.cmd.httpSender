@@ -106,7 +106,7 @@ public class MainTest {
 
     @Test
     public void testPostHttp1() throws Exception {
-        String requestBody = "TEST_TEST_TEST";
+        String requestBody = "TEST_TEST_TEST\nTEST_TEST_TEST\nTEST_TEST_TEST";
         try (TestServer server = new TestServer.Builder("POST", "http", 10001, "/test")
                 .expectedRequestBody(requestBody.getBytes(StandardCharsets.UTF_8)).build()) {
 
@@ -128,8 +128,10 @@ public class MainTest {
 				+ "POST /test HTTP/1.1\r\n"
 				+ "Host: localhost:10001\r\n"
 				+ "Connection: close\r\n"
-				+ "Content-Length: 14\r\n"
+				+ "Content-Length: 44\r\n"
 				+ "\r\n"
+				+ "TEST_TEST_TEST\n"
+				+ "TEST_TEST_TEST\n"
 				+ "TEST_TEST_TEST\n"
 				+ "======================[ REQUEST SENT ]======================\n"
 				+ "HTTP/1.1 204 No Content\r\n"
@@ -146,7 +148,7 @@ public class MainTest {
 
     @Test
     public void testPostHttp2() throws Exception {
-        String requestBody = "TEST_TEST_TEST";
+        String requestBody = "TEST_TEST_TEST\nTEST_TEST_TEST\nTEST_TEST_TEST";
         try (TestServer server = new TestServer.Builder("POST", "https", 10001, "/test")
                 .expectedRequestBody(requestBody.getBytes(StandardCharsets.UTF_8)).useHttp2().build()) {
 

@@ -10,6 +10,7 @@ public class NativeMainIT extends MainTest {
 
     // Execute the same tests but in native mode.
 
-    // TODO: make native image tests run
+    // TODO: make native image tests run, @see
+    // https://github.com/quarkusio/quarkus/issues/10212
 
 }

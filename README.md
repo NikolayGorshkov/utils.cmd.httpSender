@@ -95,7 +95,7 @@ To add arguments add, for example `-Dquarkus.args='--help'`
 
 The application can be packaged using `./mvnw package`.
 It produces the `utils.cmd.httpSender-0.1-runner.jar` file in the `/target` directory.
-Be aware that it’s not an _über-jar_ as the dependencies are copied into the `target/lib` directory.
+This file is an _über-jar_. This is configured in the pom.xml.
 
 The application is now runnable using `java -jar target/utils.cmd.httpSender-0.1-runner.jar`.
 

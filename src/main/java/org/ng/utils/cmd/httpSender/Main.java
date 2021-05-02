@@ -232,6 +232,8 @@ public class Main implements QuarkusApplication {
                 } else if (!bodySeparator) {
                     if (body == null) {
                         body = new StringBuilder();
+                    } else {
+                        body.append('\n');
                     }
                     body.append(line);
                 }
